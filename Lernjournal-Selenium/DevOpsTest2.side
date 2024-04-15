@@ -1,0 +1,210 @@
+{
+  "id": "c931bbdc-2de7-4ad1-8585-463e0b1a7865",
+  "version": "2.0",
+  "name": "DevOpsTest",
+  "url": "https://www.srf.ch/",
+  "tests": [{
+    "id": "e471afd1-8093-4c05-8ba0-642ba9d2f249",
+    "name": "meteo-test",
+    "commands": [{
+      "id": "462e4bfb-c75c-4969-b71e-4bccfc6e909c",
+      "comment": "",
+      "command": "open",
+      "target": "/meteo",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec2a0701-5801-44e9-9a7f-a4e05129ec8b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1294x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0a430de-ea0f-4158-a5f8-f3bb9f099175",
+      "comment": "",
+      "command": "click",
+      "target": "id=search__input",
+      "targets": [
+        ["id=search__input", "id"],
+        ["name=q", "name"],
+        ["css=#search__input", "css:finder"],
+        ["xpath=//input[@id='search__input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa485977-eb65-4698-a057-e3967d4a01f3",
+      "comment": "",
+      "command": "type",
+      "target": "id=search__input",
+      "targets": [
+        ["id=search__input", "id"],
+        ["name=q", "name"],
+        ["css=#search__input", "css:finder"],
+        ["xpath=//input[@id='search__input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Bern"
+    }, {
+      "id": "9c209f52-750e-4f94-915b-f4ddb036d1a3",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=search__input",
+      "targets": [
+        ["id=search__input", "id"],
+        ["name=q", "name"],
+        ["css=#search__input", "css:finder"],
+        ["xpath=//input[@id='search__input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "525d04c2-375b-41b3-b863-bb07dcfc6b4f",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.weather-title__main",
+      "targets": [
+        ["css=.weather-title__main", "css:finder"],
+        ["xpath=//section/div/h2", "xpath:position"]
+      ],
+      "value": "Wetter\\nBern"
+    }]
+  }, {
+    "id": "1781938f-edbd-4d0d-b9dc-03e74bc382f1",
+    "name": "addToCard",
+    "commands": [{
+      "id": "52bf3826-7fce-400e-9f6d-62cfb5e82f30",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.brack.ch/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9cbea979-901f-4bc7-8cd3-1902a70395f0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1294x1150",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a8f138b-787e-4ad1-bd7b-f34cf919cb50",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchFieldId",
+      "targets": [
+        ["id=searchFieldId", "id"],
+        ["name=search", "name"],
+        ["css=#searchFieldId", "css:finder"],
+        ["xpath=//input[@id='searchFieldId']", "xpath:attributes"],
+        ["xpath=//header[@id='b2c-header-container']/div/div[3]/div/div/div[2]/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "414a8821-4ef4-4eeb-bd28-0b4759976336",
+      "comment": "",
+      "command": "type",
+      "target": "id=searchFieldId",
+      "targets": [
+        ["id=searchFieldId", "id"],
+        ["name=search", "name"],
+        ["css=#searchFieldId", "css:finder"],
+        ["xpath=//input[@id='searchFieldId']", "xpath:attributes"],
+        ["xpath=//header[@id='b2c-header-container']/div/div[3]/div/div/div[2]/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "helm"
+    }, {
+      "id": "b683cf1e-6a9b-41a3-bbb6-209c945db1f5",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=searchFieldId",
+      "targets": [
+        ["id=searchFieldId", "id"],
+        ["name=search", "name"],
+        ["css=#searchFieldId", "css:finder"],
+        ["xpath=//input[@id='searchFieldId']", "xpath:attributes"],
+        ["xpath=//header[@id='b2c-header-container']/div/div[3]/div/div/div[2]/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "fdbbcc16-c774-42f6-9ecd-da8a15df0a64",
+      "comment": "",
+      "command": "click",
+      "target": "css=.blsaq9A1G:nth-child(1) > .blsaHDjea",
+      "targets": [
+        ["css=.blsaq9A1G:nth-child(1) > .blsaHDjea", "css:finder"],
+        ["xpath=//main[@id='b2c-search-snippet']/div/div[2]/section[2]/div[2]/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/uvex-helm-kid-3-1149359')]", "xpath:href"],
+        ["xpath=//div[2]/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ba215af-6193-491e-ad27-42764157bd17",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bpaTv2dl",
+      "targets": [
+        ["css=.bpaTv2dl", "css:finder"],
+        ["xpath=//main[@id='b2c-pdp-container']/article/div[2]/div/div/div/div/div/div/div[2]/div[2]/div/div/div[3]/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc73b360-d9f2-4d0b-af37-50ab2374172d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.bhakIVLc svg",
+      "targets": [
+        ["css=.bhakIVLc svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "bcf540b5-f4bb-41f4-91c6-bbab80ddf2c6",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.bhakIVLc svg",
+      "targets": [
+        ["css=.bhakIVLc svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "938d33b7-fee1-4cdf-9c6c-35f76f7550dc",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.bhakIVLc svg",
+      "targets": [
+        ["css=.bhakIVLc svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "b514395b-57a1-4ba9-8c92-4309a70f1d68",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.bhakIVLc svg",
+      "targets": [
+        ["css=.bhakIVLc svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f669277-454e-4a6f-bbaa-41afa51aa4b1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.bhaop7hM > .bhasCHgA",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e45352fc-250b-44aa-8f16-dd874ffd66fc",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e471afd1-8093-4c05-8ba0-642ba9d2f249"]
+  }],
+  "urls": ["https://www.srf.ch/", "https://www.brack.ch/"],
+  "plugins": []
+}
