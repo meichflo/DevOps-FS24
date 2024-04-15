@@ -1,0 +1,84 @@
+{
+  "id": "c931bbdc-2de7-4ad1-8585-463e0b1a7865",
+  "version": "2.0",
+  "name": "DevOpsTest",
+  "url": "https://www.srf.ch",
+  "tests": [{
+    "id": "e471afd1-8093-4c05-8ba0-642ba9d2f249",
+    "name": "meteo-test",
+    "commands": [{
+      "id": "462e4bfb-c75c-4969-b71e-4bccfc6e909c",
+      "comment": "",
+      "command": "open",
+      "target": "/meteo",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec2a0701-5801-44e9-9a7f-a4e05129ec8b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1294x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0a430de-ea0f-4158-a5f8-f3bb9f099175",
+      "comment": "",
+      "command": "click",
+      "target": "id=search__input",
+      "targets": [
+        ["id=search__input", "id"],
+        ["name=q", "name"],
+        ["css=#search__input", "css:finder"],
+        ["xpath=//input[@id='search__input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa485977-eb65-4698-a057-e3967d4a01f3",
+      "comment": "",
+      "command": "type",
+      "target": "id=search__input",
+      "targets": [
+        ["id=search__input", "id"],
+        ["name=q", "name"],
+        ["css=#search__input", "css:finder"],
+        ["xpath=//input[@id='search__input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Bern"
+    }, {
+      "id": "9c209f52-750e-4f94-915b-f4ddb036d1a3",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=search__input",
+      "targets": [
+        ["id=search__input", "id"],
+        ["name=q", "name"],
+        ["css=#search__input", "css:finder"],
+        ["xpath=//input[@id='search__input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "525d04c2-375b-41b3-b863-bb07dcfc6b4f",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.weather-title__main",
+      "targets": [
+        ["css=.weather-title__main", "css:finder"],
+        ["xpath=//section/div/h2", "xpath:position"]
+      ],
+      "value": "Wetter\\nBern"
+    }]
+  }],
+  "suites": [{
+    "id": "e45352fc-250b-44aa-8f16-dd874ffd66fc",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e471afd1-8093-4c05-8ba0-642ba9d2f249"]
+  }],
+  "urls": ["https://www.srf.ch/"],
+  "plugins": []
+}
